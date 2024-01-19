@@ -5,38 +5,38 @@ class Person {
 	}
 
 	get getName(){
-		return this.name;
+		return `${this.name}`;
 	}
 	set setAge(age){
-		return this.age;
+		this.age = age;
+	}
+	study(){
+		return `${this.name} is studying`;
+	}
+	teach(){
+		return `${this.name} is teaching`
 	}
 	
 }
 
 class Student extends Person {
 	constructor(stuName,stuAge){
-		super(stuName,stuAge);
-		this.stuName = stuName;
-		this.stuAge = stuAge;
+		super(name, age)
+		this.name = stuName;
+		this.age = stuAge;
 
 	}
 	
-	study(){
-		return `${this.stuName} is studying`;
-	}
+
 }
 
 class Teacher extends Person {
 	constructor(teaName, teaAge){
-		super(teaName, teaAge);
 		this.teaName = teaName;
 		this.teaAge = teaAge;
 	}
-	teach(){
-		return `${this.teaName} is teaching`
-	}
-}
 
+}
 
 // Do not change the code below this line
 window.Person = Person;
